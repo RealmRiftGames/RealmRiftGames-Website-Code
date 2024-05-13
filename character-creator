@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Character Creator</title>
+</head>
+<body>
+    <div class="container">
+        <h1 style="text-align: center;">Character Creator</h1>
+        <div class="input-group" style="text-align: center;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <div class="number-input">
+                <label for="level">Level:</label>
+                <input type="number" id="level" name="level" min="1" max="20" value="1">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="background">Background:</label>
+            <select id="background" name="background">
+                <option value="cartographer">Cartographer</option>
+                <option value="exile">Exile</option>
+                <option value="foreigner">Foreigner</option>
+                <option value="geisha">Geisha</option>
+                <option value="healer">Healer</option>
+                <option value="komuso-monk">Komuso Monk</option>
+                <option value="merchant">Merchant</option>
+                <option value="monk">Monk</option>
+                <option value="oniwaban">Oniwaban</option>
+                <option value="peasant">Peasant</option>
+                <option value="pirate">Pirate</option>
+                <option value="ronin">Ronin</option>
+                <option value="sailor">Sailor</option>
+                <option value="samurai">Samurai</option>
+                <option value="shinobi">Shinobi</option>
+                <option value="soldier-knight">Soldier Knight</option>
+                <option value="sumo-wrestler">Sumo Wrestler</option>
+                <option value="tea-ceremony-master">Tea Ceremony Master</option>
+                <option value="thief">Thief</option>
+                <option value="vassal">Vassal</option>
+            </select>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="lineage">Lineage:</label>
+            <select id="lineage" name="lineage">
+                <option value="aedoha">Aedoha</option>
+                <option value="frotheim">Frotheim</option>
+                <option value="sensoji">Sensoji</option>
+                <option value="shenmi-isles">Shenmi Isles</option>
+                <option value="suryadesh">Suryadesh</option>
+                <option value="valoria">Valoria</option>
+                <option value="zamundara">Zamundara</option>
+            </select>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="clan">Clan:</label>
+            <select id="clan" name="clan">
+                <option value="muji">Muji</option>
+                <option value="nami">Nami</option>
+                <option value="shinta">Shinta</option>
+                <option value="susu">Susu</option>
+                <option value="tani">Tani</option>
+                <option value="tetsu">Tetsu</option>
+                <option value="yama">Yama</option>
+            </select>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="birth-sign">Birth Sign:</label>
+            <select id="birth-sign" name="birth-sign">
+                <option value="foxsquirrel">Foxsquirrel Mutsuki</option>
+                <option value="hawk">Hawk Kisaragi</option>
+                <option value="moth">Moth Yayoi</option>
+                <option value="snake">Snake Uzuki</option>
+                <option value="spider">Spider Satsuki</option>
+                <option value="boar">Boar Minazuki</option>
+                <option value="crane">Crane Fumizuki</option>
+                <option value="turtle">Turtle Hazuki</option>
+                <option value="twin-owls">Twin Owls Nagatsuki</option>
+                <option value="koi-fish">Koi Fish Kannazuki</option>
+                <option value="tanuki">Tanuki Shimotsuki</option>
+                <option value="monkey">Monkey Shiwasu</option>
+            </select>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="ambitions">Ambitions:</label>
+            <input type="text" id="ambitions" name="ambitions">
+        </div>
+        <div class="attributes">
+            <h2 style="text-align: center;">Attributes</h2>
+            <div class="input-group" style="text-align: center;">
+                <label for="skill">Skill:</label>
+                <div class="number-input">
+                    <input type="number" id="skill" name="skill" min="0" max="20" value="0">
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="courage">Courage:</label>
+                <div class="number-input">
+                    <input type="number" id="courage" name="courage" min="0" max="20" value="0">
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="focus">Focus:</label>
+                <div class="number-input">
+                    <input type="number" id="focus" name="focus" min="0" max="20" value="0">
+                </div>
+            </div>
+        </div>
+        <div class="talents">
+            <h2 style="text-align: center;">Talents</h2>
+            <div class="number-input" style="text-align: center;">
+                <label for="speed">Speed:</label>
+                <input type="number" id="speed" name="speed" min="0" max="40" value="0">
+            </div>
+            <div class="number-input" style="text-align: center;">
+                <label for="nimbleness">Nimbleness:</label>
+                <input type="number" id="nimbleness" name="nimbleness" min="0" max="40" value="0">
+            </div>
+            <div class="number-input" style="text-align: center;">
+                <label for="fortitude">Fortitude:</label>
+                <input type="number" id="fortitude" name="fortitude" min="0" max="40" value="0">
+            </div>
+            <div class="number-input" style="text-align: center;">
+                <label for="backbone">Backbone:</label>
+                <input type="number" id="backbone" name="backbone" min="0" max="40" value="0">
+            </div>
+            <div class="number-input" style="text-align: center;">
+                <label for="intuition">Intuition:</label>
+                <input type="number" id="intuition" name="intuition" min="0" max="40" value="0">
+            </div>
+            <div class="number-input" style="text-align: center;">
+                <label for="wits">Wits:</label>
+                <input type="number" id="wits" name="wits" min="0" max="40" value="0">
+            </div>
+        </div>
+        <div class="combat-stats" style="text-align: center;">
+            <h2 style="text-align: center;">Combat Stats</h2>
+            <div class="input-group" style="text-align: center;">
+                <label for="senko">Senko:</label>
+                <div class="number-input">
+                    <input type="number" id="senko" name="senko" readonly>
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="vitality">Vitality:</label>
+                <div class="number-input">
+                    <input type="number" id="vitality" name="vitality" readonly>
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="spirit">Spirit:</label>
+                <div class="number-input">
+                    <input type="number" id="spirit" name="spirit" readonly>
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="armor">Armor:</label>
+                <div class="number-input">
+                    <input type="number" id="armor" name="armor" min="0" max="100">
+                </div>
+            </div>
+            <div class="input-group" style="text-align: center;">
+                <label for="defense">Defense:</label>
+                <div class="number-input">
+                    <input type="number" id="defense" name="defense" min="0" max="100" readonly>
+                </div>
+            </div>
+            <button style="display: inline-block; margin: 10px auto;" onclick="calculateStats()">Calculate Stats</button>
+        </div>
+    </div>
+
+    <script>
+        function changeLevel(value) {
+            var levelInput = document.getElementById("level");
+            var currentLevel = parseInt(levelInput.value);
+            var newLevel = currentLevel + value;
+            if (newLevel >= parseInt(levelInput.min) && newLevel <= parseInt(levelInput.max)) {
+                levelInput.value = newLevel;
+            }
+        }
+
+        function calculateStats() {
+            var skill = parseInt(document.getElementById("skill").value);
+            var courage = parseInt(document.getElementById("courage").value);
+            var focus = parseInt(document.getElementById("focus").value);
+            var level = parseInt(document.getElementById("level").value);
+            var senko = 3 * skill + 2 * courage + focus;
+            var vitality = 13 + 2 * courage + 4 * (level - 1);
+            var spirit = 3 + focus + (level - 1);
+            var armor = parseInt(document.getElementById("armor").value);
+            var defense = 3 * armor;
+            document.getElementById("senko").value = senko;
+            document.getElementById("vitality").value = vitality;
+            document.getElementById("spirit").value = spirit;
+            document.getElementById("defense").value = defense;
+        }
+
+        function saveCharacter() {
+            // Implement saving functionality here
+            alert("Character saved!"); // Placeholder for demonstration
+        }
+    </script>
+
+    <div class="bushido-styles" style="text-align: center;">
+        <h2 style="text-align: center;">Bushido Styles</h2>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="wandering-whirlwind" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="wandering-whirlwind">Wandering Whirlwind:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="wandering-whirlwind-amount" name="wandering-whirlwind-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="dance-of-mist" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="dance-of-mist">Dance of Mist:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="dance-of-mist-amount" name="dance-of-mist-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="demon-style" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="demon-style">Demon Style:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="demon-style-amount" name="demon-style-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="waterfall-flow" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="waterfall-flow">Waterfall Flow:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="waterfall-flow-amount" name="waterfall-flow-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="harmony-of-blades" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="harmony-of-blades">Harmony of Blades:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="harmony-of-blades-amount" name="harmony-of-blades-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <input type="checkbox" id="path-of-zen" name="bushido-style" onchange="updateCheckboxLimit()">
+            <label for="path-of-zen">Path of Zen:</label>
+            <div class="number-input" style="display: inline-block;">
+                <input type="number" id="path-of-zen-amount" name="path-of-zen-amount" min="0" max="10" value="0">
+            </div>
+        </div>
+    </div>
+    <div class="bushido-techniques" style="text-align: center;">
+        <h2 style="text-align: center;">Bushido Techniques</h2>
+        <div class="input-group" style="text-align: center;">
+            <label for="technique1">Technique 1:</label>
+            <input type="text" id="technique1" name="technique1">
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="description1">Description 1:</label>
+            <textarea id="description1" name="description1" rows="4" cols="50"></textarea>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="technique2">Technique 2:</label>
+            <input type="text" id="technique2" name="technique2">
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="description2">Description 2:</label>
+            <textarea id="description2" name="description2" rows="4" cols="50"></textarea>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="technique3">Technique 3:</label>
+            <input type="text" id="technique3" name="technique3">
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="description3">Description 3:</label>
+            <textarea id="description3" name="description3" rows="4" cols="50"></textarea>
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="technique4">Technique 4:</label>
+            <input type="text" id="technique4" name="technique4">
+        </div>
+        <div class="input-group" style="text-align: center;">
+            <label for="description4">Description 4:</label>
+            <textarea id="description4" name="description4" rows="4" cols="50"></textarea>
+        </div>
+    </div>
+    <div class="training-section" style="text-align: center;">
+        <h2 style="text-align: center;">Training</h2>
+        <div id="training-container">
+            <div class="training-input" style="text-align: center;">
+                <label for="category1">Category:</label>
+                <select id="category1" name="category1" onchange="updateTrainingOptions(this)">
+                    <option value="">-- Select Category --</option>
+                    <option value="social">Social</option>
+                    <option value="combat">Combat</option>
+                    <option value="weapon">Weapon</option>
+                </select>
+                <label for="training1">Training:</label>
+                <select id="training1" name="training1">
+                    <option value="">-- Select Training --</option>
+                </select>
+                <label for="tier1">Tier:</label>
+                <select id="tier1" name="tier1" style="margin-right: 10px;">
+                    <option value="">-- Select Tier --</option>
+                </select>
+            </div>
+        </div>
+        <button style="display: inline-block; margin: 10px auto;" onclick="addTraining()">Add More Training</button>
+        <button style="display: inline-block; margin: 10px auto;" onclick="deleteTraining()">Delete Training</button>
+    </div>
+    
+    <script>
+        var trainingCount = 1;
+    
+        function updateTrainingOptions(categoryDropdown) {
+            var trainingDropdown = categoryDropdown.parentElement.querySelector("select[name^='training']");
+            var tierDropdown = categoryDropdown.parentElement.querySelector("select[name^='tier']");
+            var selectedCategory = categoryDropdown.value;
+            var trainingOptions;
+            var tierOptions;
+    
+            // Clear existing options
+            trainingDropdown.innerHTML = '<option value="">-- Select Training --</option>';
+            tierDropdown.innerHTML = '<option value="">-- Select Tier --</option>';
+    
+            // Set training options and tier options based on selected category
+            switch (selectedCategory) {
+                case 'social':
+                    trainingOptions = ['Art of Negotiation', 'Cooking', 'Crafty', 'Eavesdropping', 'Embroidery', 'Enchanting Smile', 'Fabricate Information', 'Fishing', 'Foraging', 'Honorable Etiquette', 'Linguistics', 'Reading Emotions', 'Veil of Disguise', 'Art of Sushi'];
+                    tierOptions = ['1', '2'];
+                    break;
+                case 'combat':
+                    trainingOptions = ['Alchemy', 'Ambush Tactics', 'Bursting Fist Style', 'Bushcraft', 'Combat Healing', 'Disarm', 'Four Step Knot', 'Grappler', 'Improvisation', 'Iron Wall Style', 'Long Range Defense', 'Opportunity Attack', 'Safe Fall', 'Scouting', 'Tracking', 'Trapping', 'Way of Double Steel', 'Way of the Fist', 'Way of the Ninja'];
+                    tierOptions = ['1'];
+                    break;
+                case 'weapon':
+                    trainingOptions = ['Bo Staff', 'Boken', 'Flail', 'Flintlock Pistol', 'Hankyu', 'Jitte', 'Kama', 'Kanabo', 'Katana', 'Komainu Claws', 'Kusarigama', 'Kyoketsu-shoge', 'Longsword', 'Masakari', 'Naginata', 'Nunchaku', 'Odachi', 'Ono Axe', 'Scimitar', 'Short Spear', 'Shortsword', 'Spear', 'Tanto', 'Tanegashima', 'Teppo', 'Tessen', 'Wakizashi', 'Yari', 'Yumi'];
+                    tierOptions = ['1', '2', '3'];
+                    break;
+                default:
+                    trainingOptions = [];
+                    tierOptions = [];
+                    break;
+            }
+    
+            // Add options to training dropdown
+            trainingOptions.forEach(function(option) {
+                var newOption = document.createElement('option');
+                newOption.value = option.toLowerCase().replace(/\s/g, '-');
+                newOption.textContent = option;
+                trainingDropdown.appendChild(newOption);
+            });
+    
+            // Add options to tier dropdown
+            tierOptions.forEach(function(option) {
+                var newOption = document.createElement('option');
+                newOption.value = option;
+                newOption.textContent = option;
+                tierDropdown.appendChild(newOption);
+            });
+        }
+    
+        function addTraining() {
+            trainingCount++;
+            var container = document.getElementById("training-container");
+            var newTrainingInput = document.createElement("div");
+            newTrainingInput.className = "training-input";
+            newTrainingInput.innerHTML = '<label for="category' + trainingCount + '">Category:</label>' +
+                '<select id="category' + trainingCount + '" name="category' + trainingCount + '" onchange="updateTrainingOptions(this)">' +
+                '<option value="">-- Select Category --</option>' +
+                '<option value="social">Social</option>' +
+                '<option value="combat">Combat</option>' +
+                '<option value="weapon">Weapon</option>' +
+                '</select>' +
+                '<label for="training' + trainingCount + '">Training:</label>' +
+                '<select id="training' + trainingCount + '" name="training' + trainingCount + '">' +
+                '<option value="">-- Select Training --</option>' +
+                '</select>' +
+                '<label for="tier' + trainingCount + '">Tier:</label>' +
+                '<select id="tier' + trainingCount + '" name="tier' + trainingCount + '" style="margin-right: 10px;">' +
+                '<option value="">-- Select Tier --</option>' +
+                '</select>';
+            container.appendChild(newTrainingInput);
+        }
+    
+        function deleteTraining() {
+            if (trainingCount > 1) {
+                var container = document.getElementById("training-container");
+                container.removeChild(container.lastElementChild);
+                trainingCount--;
+            }
+        }
+    </script>
+    
+</body>
+</html>
