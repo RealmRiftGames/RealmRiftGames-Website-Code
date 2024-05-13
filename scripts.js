@@ -79,5 +79,35 @@ var trainingCount = 1;
             }
         }
 
+function finalizeCharacter() {
+    // Get all input elements
+    var inputElements = document.querySelectorAll("input, select, textarea");
 
-        
+    // Iterate over each input element
+    inputElements.forEach(function(inputElement) {
+        // Check if the element is a checkbox
+        if (inputElement.type === "checkbox") {
+            // Check if the checkbox is checked
+            if (inputElement.checked) {
+                // Replace the checkbox with a checkmark icon
+                var checkmarkIcon = document.createElement("span");
+                checkmarkIcon.innerHTML = "&#10003;"; // Unicode for checkmark symbol
+                inputElement.parentNode.replaceChild(checkmarkIcon, inputElement);
+            } else {
+                // Remove the parent container if unchecked (this will remove the whole line)
+                inputElement.parentElement.remove();
+            }
+        } else {
+            // Create a new text element
+            var textElement = document.createElement("span");
+            // Set the text content to the value of the input element
+            textElement.textContent = inputElement.value;
+            // Replace the input element with the text element
+            inputElement.parentNode.replaceChild(textElement, inputElement);
+        }
+    });
+
+    // Hide the "Finalize" button
+    var finalizeButton = document.querySelector("button");
+    finalizeButton.style.display = "none";
+}
