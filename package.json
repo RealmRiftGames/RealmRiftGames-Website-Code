@@ -1,0 +1,11 @@
+{
+  "name": "character-creator",
+  "version": "1.0.0",
+  "description": "A character creator web application",
+  "scripts": {
+    "build": "echo 'No build step required for static HTML site'"
+  },
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {}
+}
