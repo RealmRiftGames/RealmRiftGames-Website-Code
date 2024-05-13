@@ -1,7 +1,5 @@
 body {
-    font-family: Helvetica, sans-serif;
-    background-color: black; /* Set black background */
-    color: white; /* Set white text */
+    font-family: Luminari, sans-serif;
 }
 
 .container {
@@ -25,15 +23,14 @@ body {
     padding: 14px 16px;
     transition: 0.3s;
     font-size: 16px;
-    color: white; /* Set white text */
 }
 
 .tab button:hover {
-    background-color: #363636; /* Darker background color on hover */
+    background-color: #ddd;
 }
 
 .tab button.active {
-    background-color: #900; /* Red accent color for active tab */
+    background-color: #ccc;
 }
 
 .tabcontent {
@@ -42,7 +39,14 @@ body {
     border-top: none;
 }
 
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
 /* Optional: Add a background color to the tab content */
 .tabcontent {
-    background: #a7a7a7; /* Dark gray background for tab content */
+    background: #f9f9f9;
 }
