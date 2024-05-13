@@ -1,65 +1,52 @@
-/* styles.css */
-
-/* General styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
-    margin: 0;
-    padding: 0;
+    font-family: Luminari, sans-serif;
 }
 
 .container {
     max-width: 800px;
     margin: 0 auto;
-    background-color: #fff;
     padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h1, h2 {
-    color: #333;
+.tab {
+    overflow: hidden;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
 }
 
-.input-group {
-    margin-bottom: 10px;
-}
-
-/* Form styling */
-input[type="text"],
-input[type="number"],
-select,
-textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-button {
-    background-color: #007bff;
-    color: #fff;
+.tab button {
+    background-color: inherit;
+    float: left;
     border: none;
-    padding: 10px 20px;
+    outline: none;
     cursor: pointer;
-    border-radius: 4px;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 16px;
 }
 
-button:hover {
-    background-color: #0056b3;
+.tab button:hover {
+    background-color: #ddd;
 }
 
-/* Grid layout for talents and attributes */
-.attributes,
-.talents,
-.combat-stats {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    grid-gap: 10px;
+.tab button.active {
+    background-color: #ccc;
 }
 
-/* Styling for checkboxes and labels */
-input[type="checkbox"] {
-    margin-right: 5px;
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+/* Optional: Add a background color to the tab content */
+.tabcontent {
+    background: #f9f9f9;
 }
