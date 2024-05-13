@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +21,10 @@
                 <input type="number" id="level" name="level" min="1" max="20" value="1">
             </div>
         </div>
+        <!-- Background Dropdown -->
         <div class="input-group" style="text-align: center;">
             <label for="background">Background:</label>
-            <select id="background" name="background">
+            <select id="background" name="background" onchange="showDescription(this)">
                 <option value="cartographer">Cartographer</option>
                 <option value="exile">Exile</option>
                 <option value="foreigner">Foreigner</option>
@@ -44,10 +46,12 @@
                 <option value="thief">Thief</option>
                 <option value="vassal">Vassal</option>
             </select>
+            <div id="background-description" class="description"></div>
         </div>
+        <!-- Lineage Dropdown -->
         <div class="input-group" style="text-align: center;">
             <label for="lineage">Lineage:</label>
-            <select id="lineage" name="lineage">
+            <select id="lineage" name="lineage" onchange="showDescription(this)">
                 <option value="aedoha">Aedoha</option>
                 <option value="frotheim">Frotheim</option>
                 <option value="sensoji">Sensoji</option>
@@ -56,10 +60,12 @@
                 <option value="valoria">Valoria</option>
                 <option value="zamundara">Zamundara</option>
             </select>
+            <div id="lineage-description" class="description"></div>
         </div>
+        <!-- Clan Dropdown -->
         <div class="input-group" style="text-align: center;">
             <label for="clan">Clan:</label>
-            <select id="clan" name="clan">
+            <select id="clan" name="clan" onchange="showDescription(this)">
                 <option value="muji">Muji</option>
                 <option value="nami">Nami</option>
                 <option value="shinta">Shinta</option>
@@ -68,10 +74,12 @@
                 <option value="tetsu">Tetsu</option>
                 <option value="yama">Yama</option>
             </select>
+            <div id="clan-description" class="description"></div>
         </div>
+        <!-- Birth Sign Dropdown -->
         <div class="input-group" style="text-align: center;">
             <label for="birth-sign">Birth Sign:</label>
-            <select id="birth-sign" name="birth-sign">
+            <select id="birth-sign" name="birth-sign" onchange="showDescription(this)">
                 <option value="foxsquirrel">Foxsquirrel Mutsuki</option>
                 <option value="hawk">Hawk Kisaragi</option>
                 <option value="moth">Moth Yayoi</option>
@@ -85,26 +93,31 @@
                 <option value="tanuki">Tanuki Shimotsuki</option>
                 <option value="monkey">Monkey Shiwasu</option>
             </select>
+            <div id="birth-sign-description" class="description"></div>
         </div>
+        <!-- Ambition Input -->
         <div class="input-group" style="text-align: center;">
             <label for="ambition">Ambition:</label>
             <input type="text" id="ambition" name="ambition" style="width: 300px;">
-            
         </div>
+        <!-- Attributes -->
         <div class="attributes">
             <h2 style="text-align: center; margin-bottom: 0;">Attributes</h2><h5 style="text-align: center; margin-top: 0;">3 points + 1 per every level after 1.</h5>
+            <!-- Skill -->
             <div class="input-group" style="text-align: center;">
                 <label for="skill">Skill:</label>
                 <div class="number-input">
                     <input type="number" id="skill" name="skill" min="0" max="20" value="0">
                 </div>
             </div>
+            <!-- Courage -->
             <div class="input-group" style="text-align: center;">
                 <label for="courage">Courage:</label>
                 <div class="number-input">
                     <input type="number" id="courage" name="courage" min="0" max="20" value="0">
                 </div>
             </div>
+            <!-- Focus -->
             <div class="input-group" style="text-align: center;">
                 <label for="focus">Focus:</label>
                 <div class="number-input">
@@ -112,6 +125,10 @@
                 </div>
             </div>
         </div>
+        <!-- Buttons -->
+        <div class="buttons" style="text-align: center;">
+        </div>
+    </div>
         <div class="talents">
             <h2 style="text-align: center; margin-bottom: 0;">Talents</h2><h5 style="text-align: center; margin-top: 0;">2 points for every associated Atr</h5>
             <div class="number-input" style="text-align: center;">

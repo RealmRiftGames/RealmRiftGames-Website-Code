@@ -111,4 +111,96 @@ function finalizeCharacter() {
     var finalizeButton = document.querySelector("button");
     finalizeButton.style.display = "none";
 }
+        // Define descriptions for each option
+        var descriptions = {
+            // Background Descriptions
+            "cartographer": "Cartographers are skilled in map-making and navigation.",
+            "exile": "Exiles have been banished from their homeland.",
+            "foreigner": "Foreigners are from distant lands and may have unique customs.",
+            "geisha": "Geishas are trained entertainers skilled in various arts.",
+            "healer": "Healers specialize in the mending of wounds and illnesses.",
+            "komuso-monk": "Komuso Monks are wandering musicians and practitioners of Zen Buddhism.",
+            "merchant": "Merchants engage in trade and may have connections across the land.",
+            "monk": "Monks are disciplined warriors trained in martial arts and spiritual pursuits.",
+            "oniwaban": "Oniwabans are secret agents and spies.",
+            "peasant": "Peasants come from humble origins and may possess unique skills.",
+            "pirate": "Pirates are seafaring outlaws who roam the seas in search of treasure.",
+            "ronin": "Ronin are masterless samurai, often wandering the land in search of purpose.",
+            "sailor": "Sailors are experienced seafarers who navigate the oceans.",
+            "samurai": "Samurai are noble warriors who follow the Bushido code.",
+            "shinobi": "Shinobi are stealthy assassins and spies.",
+            "soldier-knight": "Soldier Knights are heavily armored warriors sworn to protect their lord.",
+            "sumo-wrestler": "Sumo Wrestlers are powerful fighters known for their strength and skill.",
+            "tea-ceremony-master": "Tea Ceremony Masters are experts in the art of tea and etiquette.",
+            "thief": "Thieves are skilled in stealth and sleight of hand.",
+            "vassal": "Vassals are loyal servants and retainers to a lord or noble family.",
+            // Lineage Descriptions
+            "aedoha": "The Aedoha lineage is known for their prowess in archery and horseback riding.",
+            "frotheim": "The Frotheim lineage is renowned for their mastery of frost magic.",
+            "sensoji": "The Sensoji lineage is respected for their dedication to honor and tradition.",
+            "shenmi-isles": "The Shenmi Isles are shrouded in mystery, with inhabitants possessing unique powers.",
+            "suryadesh": "The Suryadesh lineage hails from a distant desert kingdom, known for their resilience.",
+            "valoria": "The Valoria lineage is famous for their skilled swordsmanship and valor in battle.",
+            "zamundara": "The Zamundara lineage is known for their connection to the spirit world and mystical abilities.",
+            // Clan Descriptions
+            "muji": "The Muji clan is known for their expertise in agriculture and herbal medicine.",
+            "nami": "The Nami clan are skilled sailors and fishermen, with a deep connection to the sea.",
+            "shinta": "The Shinta clan is respected for their mastery of martial arts and combat techniques.",
+            "susu": "The Susu clan is known for their wisdom and scholarly pursuits.",
+            "tani": "The Tani clan are expert hunters and trackers, skilled in navigating the wilderness.",
+            "tetsu": "The Tetsu clan is famous for their craftsmanship in metalworking and armor smithing.",
+            "yama": "The Yama clan are mountain-dwellers, known for their resilience and endurance.",
+            // Birth Sign Descriptions
+            "foxsquirrel": "People born under the Foxsquirrel Mutsuki are known for their agility and quick reflexes.",
+            "hawk": "People born under the Hawk Kisaragi possess keen eyesight and are often skilled hunters.",
+            "moth": "People born under the Moth Yayoi are drawn to the light and possess a gentle demeanor.",
+            "snake": "People born under the Snake Uzuki are often cunning and possess the ability to shed old skin.",
+            "spider": "People born under the Spider Satsuki are skilled weavers and possess a sharp intellect.",
+            "boar": "People born under the Boar Minazuki are strong-willed and fiercely independent.",
+            "crane": "People born under the Crane Fumizuki are graceful and possess a strong sense of justice.",
+            "turtle": "People born under the Turtle Hazuki are patient and resilient, with a strong shell to protect them.",
+            "twin-owls": "People born under the Twin Owls Nagatsuki possess keen intuition and are often seen as wise.",
+            "koi-fish": "People born under the Koi Fish Kannazuki are determined and capable of overcoming obstacles.",
+            "tanuki": "People born under the Tanuki Shimotsuki are known for their mischievous nature and shapeshifting abilities.",
+            "monkey": "People born under the Monkey Shiwasu are playful and possess a clever mind.",
+        };
 
+        // Function to show description based on selected option
+        function showDescription(selectElement) {
+            // Get the selected option
+            var selectedOption = selectElement.value;
+            // Get the description div associated with this dropdown
+            var descriptionDiv = selectElement.parentElement.querySelector(".description");
+            // Set the description text based on the selected option
+            descriptionDiv.textContent = descriptions[selectedOption];
+        }
+
+        // Function to generate character
+        function generateCharacter() {
+            // Your generate character logic goes here
+            alert("Character generated!");
+        }
+
+        // Function to reset form
+        function resetForm() {
+            // Reset all input fields
+            document.getElementById("name").value = "";
+            document.getElementById("level").value = "1";
+            document.getElementById("background").selectedIndex = 0;
+            document.getElementById("lineage").selectedIndex = 0;
+            document.getElementById("clan").selectedIndex = 0;
+            document.getElementById("birth-sign").selectedIndex = 0;
+            document.getElementById("ambition").value = "";
+            document.getElementById("skill").value = "0";
+            document.getElementById("courage").value = "0";
+            document.getElementById("focus").value = "0";
+            document.getElementById("vigilance").value = "0";
+
+            // Reset description divs
+            var descriptionDivs = document.querySelectorAll(".description");
+            descriptionDivs.forEach(function(div) {
+                div.textContent = "";
+            });
+
+            alert("Form reset!");
+        }

@@ -3,50 +3,43 @@ body {
 }
 
 .container {
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
     padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
 }
 
-.tab {
-    overflow: hidden;
-    border-bottom: 1px solid #ccc;
-    margin-bottom: 20px;
+.input-group {
+    margin-bottom: 15px;
 }
 
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
+.input-group label {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.number-input input[type="number"] {
+    width: 50px;
+}
+
+.description {
+    font-style: italic;
+    margin-top: 5px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
     font-size: 16px;
+    cursor: pointer;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
 }
 
-.tab button:hover {
-    background-color: #ddd;
-}
-
-.tab button.active {
-    background-color: #ccc;
-}
-
-.tabcontent {
-    display: none;
-    padding: 20px;
-    border-top: none;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 20px;
-    border-top: none;
-}
-
-/* Optional: Add a background color to the tab content */
-.tabcontent {
-    background: #f9f9f9;
+.buttons button:hover {
+    background-color: #45a049;
 }
