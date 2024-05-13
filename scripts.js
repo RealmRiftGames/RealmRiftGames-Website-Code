@@ -111,3 +111,4 @@ function finalizeCharacter() {
     var finalizeButton = document.querySelector("button");
     finalizeButton.style.display = "none";
 }
+
