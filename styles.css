@@ -50,4 +50,16 @@ body {
     display: flex;
     justify-content: space-between;
 }
+/* Existing CSS rules */
+
+/* New CSS rules for Bushido Styles and Techniques */
+.bushido-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bushido-container .bushido-techniques {
+    width: calc(50% - 10px); /* Adjust as needed */
+    /* Subtracting 10px to account for margin between sections */
+}
 

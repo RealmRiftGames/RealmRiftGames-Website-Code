@@ -228,86 +228,106 @@
         }
     </script>
 
-    <div class="bushido-styles" style="text-align: center;">
-        <h2 style="text-align: center;">Bushido Styles</h2>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="wandering-whirlwind" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="wandering-whirlwind">Wandering Whirlwind:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="wandering-whirlwind-amount" name="wandering-whirlwind-amount" min="0" max="10" value="0">
+
+<div class="container">
+    <!-- Your other content here -->
+    
+    <!-- New section for Bushido Styles and Techniques -->
+    <div class="bushido-container">
+        <div class="bushido-styles">
+            <!-- Content for Bushido Styles -->
+            <div class="bushido-styles" style="text-align: center;">
+                <h2 style="text-align: center;">Bushido Styles</h2>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="wandering-whirlwind" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="wandering-whirlwind">Wandering Whirlwind:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="wandering-whirlwind-amount" name="wandering-whirlwind-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="dance-of-mist" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="dance-of-mist">Dance of Mist:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="dance-of-mist-amount" name="dance-of-mist-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="demon-style" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="demon-style">Demon Style:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="demon-style-amount" name="demon-style-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="waterfall-flow" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="waterfall-flow">Waterfall Flow:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="waterfall-flow-amount" name="waterfall-flow-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="harmony-of-blades" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="harmony-of-blades">Harmony of Blades:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="harmony-of-blades-amount" name="harmony-of-blades-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+                <div class="input-group" style="text-align: center;">
+                    <input type="checkbox" id="path-of-zen" name="bushido-style" onchange="updateCheckboxLimit()">
+                    <label for="path-of-zen">Path of Zen:</label>
+                    <div class="number-input" style="display: inline-block;">
+                        <input type="number" id="path-of-zen-amount" name="path-of-zen-amount" min="0" max="10" value="0">
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <div class="bushido-techniques">
+            <!-- Content for Bushido Techniques -->
+            <div class="input-group" style="text-align: center;">
+                <h2 style="text-align: center;">Bushido Techniques</h2>
+                <div class="input-group">
+                    <label for="technique1">Technique 1:</label>
+                    <input type="text" id="technique1" name="technique1">
+                </div>
+                <div class="input-group">
+                    <label for="description1">Description 1:</label>
+                    <textarea id="description1" name="description1" rows="6" cols="30"></textarea>
+                    <!-- Adjusted rows value to make it taller and cols value to make it less wide -->
+                </div>
+                <div class="input-group">
+                    <label for="technique2">Technique 2:</label>
+                    <input type="text" id="technique2" name="technique2">
+                </div>
+                <div class="input-group">
+                    <label for="description2">Description 2:</label>
+                    <textarea id="description2" name="description2" rows="6" cols="30"></textarea>
+                    <!-- Adjusted rows value to make it taller and cols value to make it less wide -->
+                </div>
+                <div class="input-group">
+                    <label for="technique3">Technique 3:</label>
+                    <input type="text" id="technique3" name="technique3">
+                </div>
+                <div class="input-group">
+                    <label for="description3">Description 3:</label>
+                    <textarea id="description3" name="description3" rows="6" cols="30"></textarea>
+                    <!-- Adjusted rows value to make it taller and cols value to make it less wide -->
+                </div>
+                <div class="input-group">
+                    <label for="technique4">Technique 4:</label>
+                    <input type="text" id="technique4" name="technique4">
+                </div>
+                <div class="input-group">
+                    <label for="description4">Description 4:</label>
+                    <textarea id="description4" name="description4" rows="6" cols="30"></textarea>
+                    <!-- Adjusted rows value to make it taller and cols value to make it less wide -->
+                </div>
             </div>
         </div>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="dance-of-mist" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="dance-of-mist">Dance of Mist:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="dance-of-mist-amount" name="dance-of-mist-amount" min="0" max="10" value="0">
             </div>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="demon-style" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="demon-style">Demon Style:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="demon-style-amount" name="demon-style-amount" min="0" max="10" value="0">
-            </div>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="waterfall-flow" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="waterfall-flow">Waterfall Flow:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="waterfall-flow-amount" name="waterfall-flow-amount" min="0" max="10" value="0">
-            </div>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="harmony-of-blades" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="harmony-of-blades">Harmony of Blades:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="harmony-of-blades-amount" name="harmony-of-blades-amount" min="0" max="10" value="0">
-            </div>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <input type="checkbox" id="path-of-zen" name="bushido-style" onchange="updateCheckboxLimit()">
-            <label for="path-of-zen">Path of Zen:</label>
-            <div class="number-input" style="display: inline-block;">
-                <input type="number" id="path-of-zen-amount" name="path-of-zen-amount" min="0" max="10" value="0">
-            </div>
-        </div>
-    </div>
-    <div class="bushido-techniques" style="text-align: center;">
-        <h2 style="text-align: center;">Bushido Techniques</h2>
-        <div class="input-group" style="text-align: center;">
-            <label for="technique1">Technique 1:</label>
-            <input type="text" id="technique1" name="technique1">
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="description1">Description 1:</label>
-            <textarea id="description1" name="description1" rows="4" cols="50"></textarea>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="technique2">Technique 2:</label>
-            <input type="text" id="technique2" name="technique2">
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="description2">Description 2:</label>
-            <textarea id="description2" name="description2" rows="4" cols="50"></textarea>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="technique3">Technique 3:</label>
-            <input type="text" id="technique3" name="technique3">
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="description3">Description 3:</label>
-            <textarea id="description3" name="description3" rows="4" cols="50"></textarea>
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="technique4">Technique 4:</label>
-            <input type="text" id="technique4" name="technique4">
-        </div>
-        <div class="input-group" style="text-align: center;">
-            <label for="description4">Description 4:</label>
-            <textarea id="description4" name="description4" rows="4" cols="50"></textarea>
-        </div>
-    </div>
+
+
     <div class="training-section" style="text-align: center;">
         <h2 style="text-align: center;">Training</h2>
         <div id="training-container">
@@ -332,13 +352,17 @@
         <button style="display: inline-block; margin: 10px auto;" onclick="addTraining()">Add More Training</button>
         <button style="display: inline-block; margin: 10px auto;" onclick="deleteTraining()">Delete Training</button>
     </div>
+            </div>
+    </div>
+</div>
+
 
             <!-- Add "Finalize" button -->
             <br><br><br>
             <button style="display: block; margin: 10px auto;" onclick="finalizeCharacter()">Finalize</button>
         </div>
         <p style="text-align: center; color: rgb(103, 23, 23); font-size: small;">Warning: "Finalize" will convert all menus to text for print. All boxes will become un-editable. Refresh the page to create a new sheet.</p>
-
+        <br>
     <script src="scripts.js"></script>
     
 </body>
