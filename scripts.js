@@ -243,3 +243,18 @@ function uploadImage() {
     uploadInstruction.style.display = "none";
 }
         
+
+
+
+
+// java for login
+
+
+
+document.getElementById("login-form").addEventListener("submit", function(event){
+    event.preventDefault();
+    // Here you can add your login logic
+    // For now, let's just redirect to the profile page
+    window.location.href = "profile.html";
+});
+
