@@ -245,11 +245,7 @@ function uploadImage() {
         
 
 
-
-
 // java for login
-
-
 
 document.getElementById("login-form").addEventListener("submit", function(event){
     event.preventDefault();
@@ -257,7 +253,6 @@ document.getElementById("login-form").addEventListener("submit", function(event)
     // For now, let's just redirect to the profile page
     window.location.href = "profile.html";
 });
-
 
 document.addEventListener('DOMContentLoaded', function() {
     // Get the form element and login error message
@@ -298,6 +293,3 @@ document.addEventListener('DOMContentLoaded', function() {
     if (username) {
         document.getElementById('username').textContent = username;
     }
-});
-
-
