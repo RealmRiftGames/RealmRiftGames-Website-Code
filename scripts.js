@@ -293,3 +293,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (username) {
         document.getElementById('username').textContent = username;
     }
+});
+
+
