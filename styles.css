@@ -58,8 +58,27 @@ body {
     justify-content: space-between;
 }
 
-.bushido-container .bushido-techniques {
-    width: calc(50% - 10px); /* Adjust as needed */
-    /* Subtracting 10px to account for margin between sections */
+/* CSS for Bushido Techniques descriptions */
+.bushido-techniques .input-group textarea {
+    width: 100%; /* Make the textarea fill its parent's width */
+    max-width: 100%; /* Ensure it doesn't exceed its parent's width */
+    box-sizing: border-box; /* Include padding and border in the width */
+}
+
+/* CSS for making "Attributes" and "Talents" sections next to each other */
+.attributes .input-group,
+.talents .input-group {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Adjust the gap as needed */
+}
+
+/* New CSS rules for organizing talents */
+.talents .input-group .number-input {
+    grid-column: span 1; /* Each talent takes one column */
+}
+
+.talents .input-group h2 {
+    grid-column: span 2; /* The heading spans both columns */
 }
 
