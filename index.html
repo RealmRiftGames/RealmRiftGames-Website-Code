@@ -118,7 +118,9 @@
         </div>
         <!-- Attributes, Talents, and Combat Stats -->
         <div class="attributes" style="text-align: center;">
-            <h2>Attributes</h2>
+            <h2 style="margin: 0;">Attributes</h2>
+            <p style="margin: 0;">3 points +1 for every level past 1.</p>
+            <br>        
             <!-- Attribute Inputs -->
             <div class="input-group">
                 <!-- Skill -->
@@ -137,7 +139,10 @@
                     <input type="number" id="focus" name="focus" min="0" max="20" value="0">
                 </div>
             </div>
-            <h2>Talents</h2>
+            <h2 style="margin: 0;">Talents</h2>
+            <p style="margin: 0;">2 points for every associate ATR point spent.</p>
+            <br>
+
             <!-- Talent Inputs -->
             <div class="input-group">
                 <!-- Speed -->
@@ -171,7 +176,10 @@
                     <input type="number" id="wits" name="wits" min="0" max="40" value="0">
                 </div>
             </div>
-            <h2>Combat Stats</h2>
+            <h2 style="margin: 0;">Combat Stats</h2>
+            <p style="margin: 0;">Add armor if equiped and - score from Spd</p>
+            <br>
+
             <!-- Combat Stat Inputs -->
             <div class="input-group">
                 <!-- Senko -->
@@ -247,7 +255,11 @@
         <div class="bushido-styles">
             <!-- Content for Bushido Styles -->
             <div class="bushido-styles" style="text-align: center;">
-                <h2 style="text-align: center;">Bushido Styles</h2>
+                <br>
+                <h2 style="margin: 0;text-align: center;">Bushido Styles</h2>
+                <p style="margin: 0;">1+1 per FOC</p>
+                <p style="margin: 0;">+1 to score for "Versatile"</p>
+                <br>
                 <div class="input-group" style="text-align: center;">
                     <input type="checkbox" id="wandering-whirlwind" name="bushido-style" onchange="updateCheckboxLimit()">
                     <label for="wandering-whirlwind">Whirlwind:</label>
@@ -338,8 +350,13 @@
             </div>
 
 
-    <div class="training-section" style="text-align: center;">
-        <h2 style="text-align: center;">Training</h2>
+    <div class="training-section" style="margin: 0;text-align: center;">
+        <h2 style="text-align: center; margin: 0;">Training</h2>
+        <p style="margin: 0;">+4 from BG & Clan.</p>
+        <p style="margin: 0;">+1 for Alliance. +1 per level.</p>
+            
+        <br>
+
         <div id="training-container">
             <div class="training-input" style="text-align: center;">
                 <label for="category1">Category:</label>
