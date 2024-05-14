@@ -3,12 +3,13 @@
 // create account
 
 exports.handler = async (event, context) => {
-    const { username, password } = JSON.parse(event.body);
-    
     try {
+        const body = JSON.parse(event.body);
+        const { username, password } = body;
+
         // Simulate user registration logic (replace with actual logic)
         // Store user data in a database, such as MongoDB or Firebase
-        
+
         // For demonstration, log the data to console
         console.log("New Username:", username);
         console.log("New Password:", password);
