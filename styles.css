@@ -103,23 +103,15 @@ body {
     position: relative; /* Position relative for absolute positioning of text */
 }
 
-#upload-instruction {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* CSS */
 #portrait-image {
-    width: 100%;
-    height: auto;
-    display: block;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 100%; /* Adjust as needed */
+    height: 100%; /* Adjust as needed */
+    object-fit: cover; /* Ensure the image covers the entire container */
+    border-radius: 50%; /* Set the border radius to 50% to maintain circular shape */
+    display: block; /* Ensure the image is displayed as a block element */
+    position: relative; /* Position relative for absolute positioning */
+    top: 50%; /* Move the image down by half of its height */
+    left: 50%; /* Move the image right by half of its width */
+    transform: translate(-50%, -50%); /* Center the image using translate */
 }
-
-text-align: center;
 

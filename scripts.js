@@ -207,19 +207,8 @@ function finalizeCharacter() {
             alert("Form reset!");
         }
 
-        function uploadImage() {
-            // Placeholder function for uploading image
-            // For demonstration purposes, let's assume the image is uploaded successfully
-            var imageUrl = "example.jpg"; // URL of the uploaded image
-            var portraitImage = document.getElementById("portrait-image");
-            portraitImage.src = imageUrl;
-            
-            // Hide the upload instruction
-            var uploadInstruction = document.getElementById("upload-instruction");
-            uploadInstruction.style.display = "none";
-        }
-        
-        // JavaScript
+
+                
 document.getElementById("file-input").addEventListener("change", function(event) {
     const file = event.target.files[0];
     if (file) {
@@ -229,9 +218,28 @@ document.getElementById("file-input").addEventListener("change", function(event)
             portraitImage.src = e.target.result;
             portraitImage.style.display = "block";
             document.getElementById("upload-instruction").style.display = "none";
+            
+            // Hide the filename display
+            var filenameDisplay = document.getElementById("file-name-display");
+            filenameDisplay.style.display = "none";
         }
         reader.readAsDataURL(file);
     }
 });
-
+function uploadImage() {
+    // Placeholder function for uploading image
+    // For demonstration purposes, let's assume the image is uploaded successfully
+    var imageUrl = "example.jpg"; // URL of the uploaded image
+    var portraitImage = document.getElementById("portrait-image");
+    portraitImage.src = imageUrl;
+    
+    // Constrain the image to the original circle size
+    portraitImage.style.maxWidth = "100px"; // Adjust as needed
+    portraitImage.style.maxHeight = "100px"; // Adjust as needed
+    portraitImage.style.borderRadius = "50%"; // Set the border radius to 50% to maintain circular shape
+    
+    // Hide the upload instruction
+    var uploadInstruction = document.getElementById("upload-instruction");
+    uploadInstruction.style.display = "none";
+}
         
