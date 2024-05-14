@@ -12,7 +12,7 @@
     <div class="container">
         <h1 style="text-align: center;">Sensoji Character Creator</h1>
         <div class="input-group" style="text-align: center;">
-            <label for="name">Name:</label>
+            <h2 for="name">Name:</label>
             <input type="text" id="name" name="name" required>
         </div>
         <div class="input-group" style="text-align: center;">
@@ -25,6 +25,7 @@
         <div class="input-group" style="text-align: center;">
             <label for="background">Background:</label>
             <select id="background" name="background" onchange="showDescription(this)">
+                <option value="select">-select your background-</option>
                 <option value="cartographer">Cartographer</option>
                 <option value="blacksmith">Blacksmith</option>
                 <option value="exile">Exile</option>
@@ -54,6 +55,7 @@
         <div class="input-group" style="text-align: center;">
             <label for="lineage">Lineage:</label>
             <select id="lineage" name="lineage" onchange="showDescription(this)">
+                <option value="select">-select your lineage-</option>
                 <option value="aedoha">Aedoha</option>
                 <option value="frotheim">Frotheim</option>
                 <option value="sensoji">Sensōji </option>
@@ -68,6 +70,7 @@
         <div class="input-group" style="text-align: center;">
             <label for="clan">Clan:</label>
             <select id="clan" name="clan" onchange="showDescription(this)">
+                <option value="select">-select your clan-</option>
                 <option value="muji">Muji</option>
                 <option value="nami">Nami</option>
                 <option value="shinta">Shinta</option>
@@ -82,6 +85,7 @@
         <div class="input-group" style="text-align: center;">
             <label for="birth-sign">Birth Sign:</label>
             <select id="birth-sign" name="birth-sign" onchange="showDescription(this)">
+                <option value="select">-select your sign-</option>
                 <option value="foxsquirrel">Foxsquirrel Mutsuki</option>
                 <option value="hawk">Hawk Kisaragi</option>
                 <option value="moth">Moth Yayoi</option>
@@ -102,95 +106,93 @@
             <label for="ambition">Ambition:</label>
             <input type="text" id="ambition" name="ambition" style="width: 300px;">
         </div>
-        <!-- Attributes -->
-        <div class="attributes">
-            <h2 style="text-align: center; margin-bottom: 0;">Attributes</h2><h5 style="text-align: center; margin-top: 0;">3 points + 1 per every level after 1.</h5>
-            <!-- Skill -->
-            <div class="input-group" style="text-align: center;">
-                <label for="skill">Skill:</label>
+        <!-- Attributes, Talents, and Combat Stats -->
+        <div class="attributes" style="text-align: center;">
+            <h2>Attributes</h2>
+            <!-- Attribute Inputs -->
+            <div class="input-group">
+                <!-- Skill -->
                 <div class="number-input">
+                    <label for="skill">Skill:</label>
                     <input type="number" id="skill" name="skill" min="0" max="20" value="0">
                 </div>
-            </div>
-            <!-- Courage -->
-            <div class="input-group" style="text-align: center;">
-                <label for="courage">Courage:</label>
+                <!-- Courage -->
                 <div class="number-input">
+                    <label for="courage">Courage:</label>
                     <input type="number" id="courage" name="courage" min="0" max="20" value="0">
                 </div>
-            </div>
-            <!-- Focus -->
-            <div class="input-group" style="text-align: center;">
-                <label for="focus">Focus:</label>
+                <!-- Focus -->
                 <div class="number-input">
+                    <label for="focus">Focus:</label>
                     <input type="number" id="focus" name="focus" min="0" max="20" value="0">
                 </div>
             </div>
-        </div>
-        <!-- Buttons -->
-        <div class="buttons" style="text-align: center;">
-        </div>
-    </div>
-        <div class="talents">
-            <h2 style="text-align: center; margin-bottom: 0;">Talents</h2><h5 style="text-align: center; margin-top: 0;">2 points for every associated Atr</h5>
-            <div class="number-input" style="text-align: center;">
-                <label for="speed">(SKL) Speed:</label>
-                <input type="number" id="speed" name="speed" min="0" max="40" value="0">
-            </div>
-            <div class="number-input" style="text-align: center;">
-                <label for="nimbleness">(SKL) Nimbleness:</label>
-                <input type="number" id="nimbleness" name="nimbleness" min="0" max="40" value="0">
-            </div>
-            <div class="number-input" style="text-align: center;">
-                <label for="fortitude">(CRG) Fortitude:</label>
-                <input type="number" id="fortitude" name="fortitude" min="0" max="40" value="0">
-            </div>
-            <div class="number-input" style="text-align: center;">
-                <label for="backbone">(CRG) Backbone:</label>
-                <input type="number" id="backbone" name="backbone" min="0" max="40" value="0">
-            </div>
-            <div class="number-input" style="text-align: center;">
-                <label for="intuition">(FOC) Intuition:</label>
-                <input type="number" id="intuition" name="intuition" min="0" max="40" value="0">
-            </div>
-            <div class="number-input" style="text-align: center;">
-                <label for="wits">(FOC) Wits:</label>
-                <input type="number" id="wits" name="wits" min="0" max="40" value="0">
-            </div>
-        </div>
-        <div class="combat-stats" style="text-align: center;">
-            <h2 style="text-align: center;">Combat Stats</h2>
-            <div class="input-group" style="text-align: center;">
-                <label for="senko">Senko:</label>
+            <h2>Talents</h2>
+            <!-- Talent Inputs -->
+            <div class="input-group">
+                <!-- Speed -->
                 <div class="number-input">
+                    <label for="speed">(SKL) Speed:</label>
+                    <input type="number" id="speed" name="speed" min="0" max="40" value="0">
+                </div>
+                <!-- Nimbleness -->
+                <div class="number-input">
+                    <label for="nimbleness">(SKL) Nimbleness:</label>
+                    <input type="number" id="nimbleness" name="nimbleness" min="0" max="40" value="0">
+                </div>
+                <!-- Fortitude -->
+                <div class="number-input">
+                    <label for="fortitude">(CRG) Fortitude:</label>
+                    <input type="number" id="fortitude" name="fortitude" min="0" max="40" value="0">
+                </div>
+                <!-- Backbone -->
+                <div class="number-input">
+                    <label for="backbone">(CRG) Backbone:</label>
+                    <input type="number" id="backbone" name="backbone" min="0" max="40" value="0">
+                </div>
+                <!-- Intuition -->
+                <div class="number-input">
+                    <label for="intuition">(FOC) Intuition:</label>
+                    <input type="number" id="intuition" name="intuition" min="0" max="40" value="0">
+                </div>
+                <!-- Wits -->
+                <div class="number-input">
+                    <label for="wits">(FOC) Wits:</label>
+                    <input type="number" id="wits" name="wits" min="0" max="40" value="0">
+                </div>
+            </div>
+            <h2>Combat Stats</h2>
+            <!-- Combat Stat Inputs -->
+            <div class="input-group">
+                <!-- Senko -->
+                <div class="number-input">
+                    <label for="senko">Senko:</label>
                     <input type="number" id="senko" name="senko" readonly style="width: 50px;">
                 </div>
-            </div>
-            <div class="input-group" style="text-align: center;">
-                <label for="vitality">Vitality:</label>
+                <!-- Vitality -->
                 <div class="number-input">
+                    <label for="vitality">Vitality:</label>
                     <input type="number" id="vitality" name="vitality" readonly style="width: 50px;">
                 </div>
-            </div>
-            <div class="input-group" style="text-align: center;">
-                <label for="spirit">Spirit:</label>
+                <!-- Spirit -->
                 <div class="number-input">
+                    <label for="spirit">Spirit:</label>
                     <input type="number" id="spirit" name="spirit" readonly style="width: 50px;">
                 </div>
-            </div>
-            <div class="input-group" style="text-align: center;">
-                <label for="armor">Armor:</label>
+                <!-- Armor -->
                 <div class="number-input">
+                    <label for="armor">Armor:</label>
                     <input type="number" id="armor" name="armor" min="0" max="100">
                 </div>
-            </div>
-            <div class="input-group" style="text-align: center;">
-                <label for="defense">Defense:</label>
+                <!-- Defense -->
                 <div class="number-input">
+                    <label for="defense">Defense:</label>
                     <input type="number" id="defense" name="defense" min="0" max="100" readonly>
                 </div>
             </div>
-            <button style="display: inline-block; margin: 10px auto;" onclick="calculateStats()">Calculate Stats</button>
+                </div>
+            </div>
+            <button style="display: block; margin: 10px auto;" onclick="calculateStats()">Calculate Combat Stats</button>
         </div>
     </div>
 
