@@ -259,4 +259,45 @@ document.getElementById("login-form").addEventListener("submit", function(event)
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    // Get the form element and login error message
+    const loginForm = document.getElementById('login-form');
+    const loginError = document.getElementById('login-error');
+
+    // Add submit event listener
+    loginForm.addEventListener('submit', async function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Get form data
+        const username = document.getElementById('username').value;
+        const password = document.getElementById('password').value;
+
+        // Send data to server to check if username exists
+        const response = await fetch('/.netlify/functions/check-user', {
+            method: 'POST',
+            body: JSON.stringify({ username, password })
+        });
+
+        console.log('Response status:', response.status); // Log response status
+
+        if (response.status === 200) {
+            // Username exists, proceed with login
+            window.location.href = 'user-profile.html';
+        } else {
+            // Username not found, display error message
+            console.log('Login failed:', await response.text()); // Log error message
+            loginError.textContent = 'Invalid username or password. Please try again or create an account.';
+            loginError.style.display = 'block';
+        }
+    });
+
+    // Retrieve username from local storage
+    const username = localStorage.getItem('username');
+
+    // Display username in the page if available
+    if (username) {
+        document.getElementById('username').textContent = username;
+    }
+});
+
 
