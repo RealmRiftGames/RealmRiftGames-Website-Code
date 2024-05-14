@@ -51,9 +51,3 @@ body {
     justify-content: space-between;
 }
 
-/* CSS for making "Bushido Styles" and "Bushido Techniques" sections next to each other */
-.bushido-styles .input-group,
-.bushido-techniques .input-group {
-    display: flex;
-    justify-content: space-between;
-}
