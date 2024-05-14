@@ -4,6 +4,8 @@ nav {
     text-align: center; /* Center-align the menu items */
     padding: 20px 0; /* Add padding to the top and bottom */
     font-family: "Segoe UI", sans-serif; /* Sans-serif font */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the menu horizontally */
 }
 
 nav ul {
