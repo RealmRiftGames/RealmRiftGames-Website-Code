@@ -32,5 +32,31 @@
             <button type="submit" style="background-color: #007bff; color: #fff; padding: 10px 20px; border: none; border-radius: 3px; cursor: pointer;">Create Account</button>
         </form>
     </div>
+
+                <!-- UNDER CONSTRUCTION TEXT -->
+                <p style="text-align: center; color: rgb(103, 23, 23); font-size: small;">MAY NOT WORK WHILE UNDER CONSTRUCTION. </p>
+
+
+    <script>
+        // Get the form element
+        const createAccountForm = document.getElementById("create-account-form");
+
+        // Add submit event listener
+        createAccountForm.addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            // Get form data
+            const username = document.getElementById("new-username").value;
+            const password = document.getElementById("new-password").value;
+
+            // Simulate server-side processing (replace with actual server-side logic)
+            // For demonstration, log the data to console
+            console.log("New Username:", username);
+            console.log("New Password:", password);
+
+            // Simulate successful account creation
+            alert("Account created successfully!"); // Replace with actual response handling
+        });
+    </script>
 </body>
 </html>
