@@ -5,7 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
-    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        nav ul li {
+            margin-right: 20px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #fff;
+        }
+        .profile-details {
+            text-align: center;
+        }
+        #logout-btn {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        #logout-btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,18 +67,33 @@
         </nav>
     </header>
 
-    <div class="container" style="max-width: 800px; margin: 0 auto; padding: 20px; border: 1px solid #ccc; border-radius: 5px;">
+    <div class="container">
         <h2>User Profile</h2>
         <div class="profile-details">
             <h3>Welcome, <span id="username"></span>!</h3>
-            <!-- User Picture and Saved Characters Here -->
             <button id="logout-btn">Log out</button>
         </div>
     </div>
 
-    <!-- UNDER CONSTRUCTION TEXT -->
-    <p style="text-align: center; color: rgb(103, 23, 23); font-size: small;">MAY NOT WORK WHILE UNDER CONSTRUCTION. </p>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const logoutBtn = document.getElementById('logout-btn');
+            const usernameSpan = document.getElementById('username');
 
-    <script src="script.js"></script>
+            // Check if user is logged in
+            if (netlifyIdentity.currentUser()) {
+                const user = netlifyIdentity.currentUser();
+                usernameSpan.textContent = user.user_metadata.full_name || user.email;
+
+                // Logout functionality
+                logoutBtn.addEventListener('click', function () {
+                    netlifyIdentity.logout();
+                });
+            } else {
+                // Redirect to login page if user is not logged in
+                window.location.href = 'login.html';
+            }
+        });
+    </script>
 </body>
 </html>
