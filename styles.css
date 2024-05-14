@@ -90,3 +90,36 @@ body {
     grid-column: span 2; /* The heading spans both columns */
 }
 
+/* CSS for character portrait */
+#character-portrait {
+    width: 100px; /* Adjust size as needed */
+    height: 100px; /* Adjust size as needed */
+    border-radius: 50%; /* Make it a circle */
+    background-color: gray; /* Initial background color */
+    margin-right: 20px; /* Add some space between portrait and name */
+    cursor: pointer;
+    display: inline-block; /* Display inline */
+    vertical-align: middle; /* Align vertically with the text */
+    position: relative; /* Position relative for absolute positioning of text */
+}
+
+#upload-instruction {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* CSS */
+#portrait-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+text-align: center;
+
