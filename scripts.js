@@ -243,38 +243,3 @@ function uploadImage() {
     uploadInstruction.style.display = "none";
 }
         
-
-    // create account js
-
-document.addEventListener("DOMContentLoaded", function() {
-    const form = document.getElementById("create-account-form");
-
-    form.addEventListener("submit", async function(event) {
-        event.preventDefault();
-
-        const formData = new FormData(form);
-        const username = formData.get("username");
-        const password = formData.get("password");
-
-        try {
-            const response = await fetch("/.netlify/functions/register", {
-                method: "POST",
-                body: JSON.stringify({ username, password }),
-                headers: {
-                    "Content-Type": "application/json"
-                }
-            });
-
-            if (!response.ok) {
-                throw new Error("Failed to create account");
-            }
-
-            // Redirect to character-creator.html upon successful account creation
-            window.location.href = "character-creator.html";
-        } catch (error) {
-            console.error("Error creating account:", error);
-            // Handle error here, e.g., show an error message to the user
-        }
-    });
-});
-
