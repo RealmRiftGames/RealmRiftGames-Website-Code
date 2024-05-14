@@ -1,13 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Profile</title>
     <link rel="stylesheet" href="styles.css">
-
-
+    <style>
+        /* Additional CSS for profile image */
+        #avatar-preview {
+            width: 100px; /* Set desired width */
+            height: 100px; /* Set desired height */
+            border-radius: 50%; /* Make it a circle */
+            overflow: hidden; /* Hide overflowing parts */
+            position: relative; /* Position relative for absolute positioning */
+            background-color: #ccc; /* Background color for the placeholder */
+        }
+        #avatar-image {
+            width: 100%; /* Make the image fill the container */
+            height: 100%; /* Make the image fill the container */
+            object-fit: cover; /* Ensure the image covers the entire container */
+            border-radius: 50%; /* Make it a circle */
+            position: absolute; /* Position absolute to overlap with the placeholder */
+            top: 0; /* Position at the top */
+            left: 0; /* Position at the left */
+        }
+    </style>
+</head>
+<body>
     <header>
         <nav>
             <ul>
@@ -19,39 +38,77 @@
         </nav>
     </header>
 
-
-</head>
-
-<body>
-
-
     <div class="container">
         <h2>User Profile</h2>
         <div class="profile-details">
-            <h3>Welcome, <span id="username"></span>!</h3>
-            <button id="logout-btn">Log out</button>
+            <div class="avatar-section">
+                <h3>Avatar</h3>
+                <div id="avatar-preview">
+                    <img id="avatar-image" src="placeholder.jpg" alt="Avatar">
+                </div>
+                <br>
+                <input type="file" accept="image/*" onchange="updateAvatar(event)">
+            </div>
+            <div class="username-section">
+                <h3>Username</h3>
+                <input type="text" id="username" placeholder="Enter your username">
+                <button onclick="updateUsername()">Change Username</button>
+            </div>
+            <div class="saved-characters-section">
+                <h3>Saved Characters</h3>
+                <!-- Display saved characters here -->
+            </div>
         </div>
     </div>
 
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const logoutBtn = document.getElementById('logout-btn');
-            const usernameSpan = document.getElementById('username');
+        // Function to update avatar
+        function updateAvatar(event) {
+            var file = event.target.files[0];
+            var formData = new FormData();
+            formData.append('avatar', file);
+            // Call a serverless function to update the user's avatar
+            fetch('/.netlify/functions/update-avatar', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    Authorization: 'Bearer ' + localStorage.getItem('netlifyAccessToken')
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Update the preview image
+                    var reader = new FileReader();
+                    reader.onload = function () {
+                        var preview = document.getElementById('avatar-image');
+                        preview.src = reader.result;
+                    }
+                    reader.readAsDataURL(file);
+                }
+            }).catch(error => {
+                console.error('Error updating avatar:', error);
+            });
+        }
 
-            // Check if user is logged in
-            if (netlifyIdentity.currentUser()) {
-                const user = netlifyIdentity.currentUser();
-                usernameSpan.textContent = user.user_metadata.full_name || user.email;
-
-                // Logout functionality
-                logoutBtn.addEventListener('click', function () {
-                    netlifyIdentity.logout();
-                });
-            } else {
-                // Redirect to login page if user is not logged in
-                window.location.href = 'login.html';
-            }
-        });
+        // Function to update username
+        function updateUsername() {
+            var newUsername = document.getElementById('username').value;
+            // Call a serverless function to update the user's username
+            fetch('/.netlify/functions/update-username', {
+                method: 'POST',
+                body: JSON.stringify({ username: newUsername }),
+                headers: {
+                    'Content-Type': 'application/json',
+                    Authorization: 'Bearer ' + localStorage.getItem('netlifyAccessToken')
+                }
+            }).then(response => {
+                if (response.ok) {
+                    // Update the UI
+                    alert('Username changed to: ' + newUsername);
+                }
+            }).catch(error => {
+                console.error('Error updating username:', error);
+            });
+        }
     </script>
 </body>
 </html>
