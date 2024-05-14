@@ -244,55 +244,37 @@ function uploadImage() {
 }
         
 
+    // create account js
 
-// java for login
+document.addEventListener("DOMContentLoaded", function() {
+    const form = document.getElementById("create-account-form");
 
-document.getElementById("login-form").addEventListener("submit", function(event){
-    event.preventDefault();
-    // Here you can add your login logic
-    // For now, let's just redirect to the profile page
-    window.location.href = "profile.html";
-});
+    form.addEventListener("submit", async function(event) {
+        event.preventDefault();
 
-document.addEventListener('DOMContentLoaded', function() {
-    // Get the form element and login error message
-    const loginForm = document.getElementById('login-form');
-    const loginError = document.getElementById('login-error');
+        const formData = new FormData(form);
+        const username = formData.get("username");
+        const password = formData.get("password");
 
-    // Add submit event listener
-    loginForm.addEventListener('submit', async function(event) {
-        event.preventDefault(); // Prevent form submission
+        try {
+            const response = await fetch("/.netlify/functions/register", {
+                method: "POST",
+                body: JSON.stringify({ username, password }),
+                headers: {
+                    "Content-Type": "application/json"
+                }
+            });
 
-        // Get form data
-        const username = document.getElementById('username').value;
-        const password = document.getElementById('password').value;
+            if (!response.ok) {
+                throw new Error("Failed to create account");
+            }
 
-        // Send data to server to check if username exists
-        const response = await fetch('/.netlify/functions/check-user', {
-            method: 'POST',
-            body: JSON.stringify({ username, password })
-        });
-
-        console.log('Response status:', response.status); // Log response status
-
-        if (response.status === 200) {
-            // Username exists, proceed with login
-            window.location.href = 'user-profile.html';
-        } else {
-            // Username not found, display error message
-            console.log('Login failed:', await response.text()); // Log error message
-            loginError.textContent = 'Invalid username or password. Please try again or create an account.';
-            loginError.style.display = 'block';
+            // Redirect to character-creator.html upon successful account creation
+            window.location.href = "character-creator.html";
+        } catch (error) {
+            console.error("Error creating account:", error);
+            // Handle error here, e.g., show an error message to the user
         }
     });
-
-    // Retrieve username from local storage
-    const username = localStorage.getItem('username');
-
-    // Display username in the page if available
-    if (username) {
-        document.getElementById('username').textContent = username;
-    }
 });
-
 
