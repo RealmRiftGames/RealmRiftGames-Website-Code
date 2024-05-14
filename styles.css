@@ -1,146 +1,30 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-.input-group label {
-    font-weight: bold;
-    margin-right: 10px;
-}
-
-.number-input input[type="number"] {
-    width: 50px;
-}
-
-.description {
-    font-style: italic;
-    margin-top: 5px;
-}
-
-.buttons button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-.buttons button:hover {
-    background-color: #45a049;
-}
-
-/* CSS for making "Attributes" and "Talents" sections next to each other */
-.attributes .input-group,
-.talents .input-group {
-    display: flex;
-    justify-content: space-between;
-}
-/* Existing CSS rules */
-
-/* New CSS rules for Bushido Styles and Techniques */
-.bushido-container {
-    display: flex;
-    justify-content: space-between;
-}
-
-/* CSS for Bushido Techniques descriptions */
-.bushido-techniques .input-group textarea {
-    width: 100%; /* Make the textarea fill its parent's width */
-    max-width: 100%; /* Ensure it doesn't exceed its parent's width */
-    box-sizing: border-box; /* Include padding and border in the width */
-}
-
-/* CSS for Bushido Styles */
-.bushido-styles .input-group {
-    width: 100%; /* Ensure each input group fills the available width */
-    box-sizing: border-box; /* Include padding and border in the width */
-    margin-bottom: 10px; /* Add some space between each style */
-}
-
-
-/* CSS for making "Attributes" and "Talents" sections next to each other */
-.attributes .input-group,
-.talents .input-group {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px; /* Adjust the gap as needed */
-}
-
-/* New CSS rules for organizing talents */
-.talents .input-group .number-input {
-    grid-column: span 1; /* Each talent takes one column */
-}
-
-.talents .input-group h2 {
-    grid-column: span 2; /* The heading spans both columns */
-}
-
-/* CSS for character portrait */
-#character-portrait {
-    width: 100px; /* Adjust size as needed */
-    height: 100px; /* Adjust size as needed */
-    border-radius: 50%; /* Make it a circle */
-    background-color: gray; /* Initial background color */
-    margin-right: 20px; /* Add some space between portrait and name */
-    cursor: pointer;
-    display: inline-block; /* Display inline */
-    vertical-align: middle; /* Align vertically with the text */
-    position: relative; /* Position relative for absolute positioning of text */
-}
-
-#portrait-image {
-    width: 100%; /* Adjust as needed */
-    height: 100%; /* Adjust as needed */
-    object-fit: cover; /* Ensure the image covers the entire container */
-    border-radius: 50%; /* Set the border radius to 50% to maintain circular shape */
-    display: block; /* Ensure the image is displayed as a block element */
-    position: relative; /* Position relative for absolute positioning */
-    top: 50%; /* Move the image down by half of its height */
-    left: 50%; /* Move the image right by half of its width */
-    transform: translate(-50%, -50%); /* Center the image using translate */
-}
-
-
-/* CSS for the header */
-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #f2f2f2;
+nav {
+    background-color: #333; /* Dark gray background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Center-align the menu items */
+    padding: 20px 0; /* Add padding to the top and bottom */
+    font-family: "Segoe UI", sans-serif; /* Sans-serif font */
 }
 
 nav ul {
-    list-style-type: none;
-    margin: 0;
+    list-style-type: none; /* Remove default bullet points */
     padding: 0;
-    display: flex;
 }
 
 nav ul li {
-    margin-right: 15px;
-}
-
-nav ul li:last-child {
-    margin-right: 0;
+    display: inline; /* Display menu items inline */
+    margin: 0 20px; /* Add margin between menu items */
 }
 
 nav ul li a {
-    text-decoration: none;
-    color: #333;
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    font-weight: bold; /* Make text bold */
+    padding: 10px 20px; /* Add padding to each link */
+    border-radius: 5px; /* Add rounded corners to links */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Darken background color on hover */
 }
