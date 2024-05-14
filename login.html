@@ -10,11 +10,28 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f2f2f2;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f2f2f2;
+        }
+        .menu li {
+            margin: 0 10px;
+        }
+        .menu li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
         }
         .container {
             max-width: 400px;
@@ -22,6 +39,7 @@
             border-radius: 8px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
         }
         h2 {
             text-align: center;
@@ -51,6 +69,16 @@
     </style>
 </head>
 <body>
+    <div class="header">
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="character-creator.html">Character Creator</a></li>
+                <li><a href="user-profile.html">User Profile</a></li>
+            </ul>
+        </nav>
+    </div>
     <div class="container">
         <h2>Login or Sign Up</h2>
         <div class="button-container">
